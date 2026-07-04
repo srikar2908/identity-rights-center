@@ -184,7 +184,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       throw new Error("Simulated network failure");
     }
     await new Promise((resolve) => setTimeout(resolve, 500));
-    if (code === mockData.otp.correctCode) {
+    if (/^\d{6}$/.test(code)) {
       const formatted = (phone: string) => {
         const cleaned = ('' + phone).replace(/\D/g, '');
         const match = cleaned.match(/^(\d{5})(\d{5})$/);
