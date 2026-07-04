@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "id": "usr_001",
+      "phoneNumber": "9876543210",
+      "maskedPhoneNumber": "+91 98765 XXXXX",
+      "isVerified": true
+    }
+  ],
+  "identityProfile": {
+    "userId": "usr_001",
+    "displayName": "Rekha Menon",
+    "pendingDisplayName": null,
+    "spamScore": {
+      "label": "Not Spam",
+      "level": "safe",
+      "reportCount": 0,
+      "hasSufficientData": true
+    },
+    "timesLookedUp": 128,
+    "lastUpdated": "2026-05-14T10:32:00Z",
+    "consentStatus": "unverified_but_unflagged",
+    "status": "none",
+    "sourceCount": 34,
+    "isVerifiedBadgeVisible": true
+  },
+  "dataSources": {
+    "totalContributingUploads": 34,
+    "businessDirectoryMatches": 0,
+    "lastContributingUploadDate": "2026-06-20T00:00:00Z"
+  },
+  "settings": {
+    "darkModeEnabled": false,
+    "smsNotificationsEnabled": true
+  },
+  "helpFaq": [
+    {
+      "id": "faq_001",
+      "question": "Why does Truecaller have my number if I never signed up?",
+      "answer": "Numbers can be added to the network when someone who has you saved as a contact uploads their contact list."
+    },
+    {
+      "id": "faq_002",
+      "question": "How long does a review take?",
+      "answer": "Most correction and erasure requests are reviewed within 3–5 business days."
+    },
+    {
+      "id": "faq_003",
+      "question": "Can I cancel a request after submitting it?",
+      "answer": "Yes — pending requests can be cancelled any time before they're resolved."
+    }
+  ],
+  "csatResponses": [],
+  "otp": {
+    "correctCode": "123456",
+    "resendCooldownSeconds": 30
+  },
+  "correctionRequests": [
+    {
+      "id": "corr_001",
+      "userId": "usr_001",
+      "previousName": "R. Menon",
+      "requestedName": "Rekha Menon",
+      "status": "resolved",
+      "submittedAt": "2026-04-02T09:15:00Z",
+      "resolvedAt": "2026-04-04T11:00:00Z"
+    }
+  ],
+  "erasureRequests": [],
+  "verificationStatus": {
+    "usr_001": {
+      "phoneVerified": true,
+      "verifiedAt": "2026-05-14T10:30:00Z"
+    }
+  },
+  "activityTimeline": [
+    {
+      "id": "act_003",
+      "type": "correction",
+      "description": "Correction request submitted: name updated to 'Rekha Menon'",
+      "status": "resolved",
+      "timestamp": "2026-04-02T09:15:00Z"
+    },
+    {
+      "id": "act_002",
+      "type": "verification",
+      "description": "Number verified successfully",
+      "status": "resolved",
+      "timestamp": "2026-03-28T14:02:00Z"
+    },
+    {
+      "id": "act_001",
+      "type": "system",
+      "description": "Identity profile first indexed",
+      "status": "resolved",
+      "timestamp": "2026-01-10T08:00:00Z"
+    }
+  ]
+}

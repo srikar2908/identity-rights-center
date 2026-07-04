@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111318;
+  
+  --primary: #2B5CE0;
+  --primary-dark: #1E42A8;
+  --primary-light: #EAF0FE;
+  --success: #1F9D63;
+  --success-light: #E7F7EF;
+  --warning: #C57A11;
+  --warning-light: #FCF1E1;
+  --danger: #D33B3B;
+  --danger-light: #FBEAEA;
+  
+  --neutral-900: #111318;
+  --neutral-700: #4B5160;
+  --neutral-400: #9AA1AE;
+  --neutral-200: #E4E7EC;
+  --neutral-100: #F5F6F8;
+  
+  --white: #FFFFFF;
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+  
+  --elevation-1: 0px 1px 2px rgba(16, 24, 40, 0.06);
+  --elevation-2: 0px 4px 12px rgba(16, 24, 40, 0.08);
+  --elevation-3: 0px 12px 32px rgba(16, 24, 40, 0.14);
+}
+
+.dark {
+  --background: #0E1015;
+  --foreground: #F2F3F5;
+  
+  --primary: #4578FF;
+  --primary-dark: #2B5CE0;
+  --primary-light: #1A2135;
+  --success: #28B475;
+  --success-light: #12281D;
+  --warning: #DB8D1A;
+  --warning-light: #2C1E0A;
+  --danger: #E24C4C;
+  --danger-light: #331A1A;
+  
+  --neutral-900: #F2F3F5;
+  --neutral-700: #A6ACB8;
+  --neutral-400: #626A7A;
+  --neutral-200: #2A2E38;
+  --neutral-100: #181B22;
+  
+  --white: #181B22;
+  
+  --elevation-1: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --elevation-2: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  --elevation-3: 0px 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-danger: var(--danger);
+  --color-danger-light: var(--danger-light);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-white: var(--white);
+  
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-full: var(--radius-full);
+  
+  --shadow-elevation-1: var(--elevation-1);
+  --shadow-elevation-2: var(--elevation-2);
+  --shadow-elevation-3: var(--elevation-3);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 200ms ease, color 200ms ease;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-200);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}
+
+/* Shimmer animation keyframes for skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--neutral-100) 25%, var(--neutral-200) 50%, var(--neutral-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.dark .shimmer {
+  background: linear-gradient(90deg, var(--neutral-100) 25%, var(--neutral-200) 50%, var(--neutral-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Skip to Content style (accessible visually hidden) */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
